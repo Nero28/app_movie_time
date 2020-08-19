@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
-import { LocaleProvider } from 'antd/lib/locale-provider'
-import enUS from 'antd/lib/locale-provider/en_US'
 import App from './App'
+import serviseWorker from './serviseWorker'
+
+import { Provider } from 'react-redux';
+import store from './store';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <LocaleProvider locale={enUS}>
-      <App />
-    </LocaleProvider>
-  </BrowserRouter>,
-  document.getElementById('root')
-)
+  //Provide our store to the app
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root'));
+serviseWorker();
