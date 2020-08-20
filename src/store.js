@@ -1,6 +1,6 @@
 import {createStore, combineReducers,compose,applyMiddleware} from 'redux';
 import thunkMiddlware from 'redux-thunk';
-import {createLogger} from redux-createLogger;
+import {createLogger} from 'redux-logger';
 import movieBrowserReducer from './modules/movie-browser/movie-browser.reducers';
 
 // The root reducer will serve as the parent for all other reducers

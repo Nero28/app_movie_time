@@ -1,15 +1,18 @@
-import React,{Component} from 'react';
- 
+import React, { Component } from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MovieBrowser from './modules/movie-browser/movie-browser.container';
+
 class App extends Component {
-  render (){
+  render() {
     return (
-      <div>
-   
-      </div>
+      // Provides the Material UI theme to child components
+      <MuiThemeProvider>
+        <MovieBrowser />
+      </MuiThemeProvider>
     )
   }
 };
 
 export default App;
 
- 
+
