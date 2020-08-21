@@ -26,4 +26,4 @@ const LoaderComponent = ({ isLoading, children }) => {
     return children ? children : null;
 };
 
-export defualt LoaderComponent;
+export default LoaderComponent;

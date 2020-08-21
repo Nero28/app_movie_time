@@ -39,13 +39,13 @@ class MovieCardComponent extends React.Component {
 
         return (
             <Card
-                style={style.card}
+                style={styles.card}
                 onMouseOver={() => this.setState({ isMouseOver: true })}
                 onMouseLeave={() => this.setState({ isMouseOver: false })}
             >
                 {/* <CardTitle title={<div style={styles.cardTitle}>{movie.title}</div>} /> */}
                 <CardMedia
-                    style={style.cardMedia}
+                    style={styles.cardMedia}
                     overlay={
                         <CardTitle
                             title={movie.title}
@@ -53,7 +53,7 @@ class MovieCardComponent extends React.Component {
                         />
                     }
                 >
-                    <img style={style.bgImage} src={movie.poster_path} />
+                    <img style={styles.bgImage} src={movie.poster_path} />
                 </CardMedia>
             </Card >
         );
