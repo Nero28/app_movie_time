@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardTitle, CardMedia } from 'material-ui';
-
+import { connect } from 'react-redux';
+import { openMovieModal } from '../movie-modal/movie-modal.actions';
 
 // These are inline styles
 // You can pass styles as objects using this convention
@@ -62,4 +63,7 @@ class MovieCardComponent extends React.Component {
 
 };
 
-export default MovieCardComponent;
+export default connect(
+    () => ({}),
+    { openMovieModal }
+)(MovieCardComponent);
